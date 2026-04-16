@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_incoluz" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.incoluz</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Info Montadores" name="info_montadores">
+                    <group>
+                        <group>
+                            <field name="x_titulo_montaje"/>
+                            <field name="x_responsable"/>
+                            <field name="x_referencia"/>
+                        </group>
+                        <group>
+                            <field name="zona_id" options="{'no_create': True}"/>
+                            <field name="x_notas_programacion"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

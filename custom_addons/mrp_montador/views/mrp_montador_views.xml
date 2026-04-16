@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Extensión de la vista de lista de zonas -->
+    <record id="incoluz_zona_sync_view_tree_inherit" model="ir.ui.view">
+        <field name="name">incoluz.entregas_montajes.zona.tree.inherit</field>
+        <field name="model">incoluz_entregas_montajes.zona</field>
+        <field name="inherit_id" ref="incoluz_entregas_montajes.view_incoluz_zona_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-info">supabase_id != False</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="supabase_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extensión de la vista de formulario de zonas -->
+    <record id="incoluz_zona_sync_view_form_inherit" model="ir.ui.view">
+        <field name="name">incoluz.entregas_montajes.zona.form.inherit</field>
+        <field name="model">incoluz_entregas_montajes.zona</field>
+        <field name="inherit_id" ref="incoluz_entregas_montajes.view_incoluz_zona_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="supabase_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

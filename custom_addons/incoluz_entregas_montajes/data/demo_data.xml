@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="zona_norte" model="incoluz_entregas_montajes.zona">
+            <field name="name">Zona Norte - Montajes SL</field>
+        </record>
+        <record id="zona_sur" model="incoluz_entregas_montajes.zona">
+            <field name="name">Zona Sur - Instalaciones Perez</field>
+        </record>
+        <record id="zona_centro" model="incoluz_entregas_montajes.zona">
+            <field name="name">Zona Centro - Logistica Incoluz</field>
+        </record>
+    </data>
+</odoo>

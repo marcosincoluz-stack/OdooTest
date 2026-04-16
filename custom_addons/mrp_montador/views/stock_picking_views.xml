@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_mrp_montador" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.mrp_montador</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <!-- Inyectamos un badge visual muy discreto justo debajo de la Zona -->
+            <xpath expr="//field[@name='zona_id']" position="after">
+                <field name="supabase_sync_status" 
+                       widget="badge" 
+                       decoration-success="supabase_sync_status == 'synced'"
+                       decoration-danger="supabase_sync_status == 'error'"
+                       decoration-info="supabase_sync_status == 'pending'"
+                       attrs="{'invisible': [('zona_id', '=', False)]}"
+                       readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

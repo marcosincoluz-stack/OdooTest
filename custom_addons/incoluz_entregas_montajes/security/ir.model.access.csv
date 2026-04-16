@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_incoluz_zona_user,incoluz_entregas_montajes.zona user,model_incoluz_entregas_montajes_zona,stock.group_stock_user,1,1,1,1
+access_incoluz_zona_manager,incoluz_entregas_montajes.zona manager,model_incoluz_entregas_montajes_zona,stock.group_stock_manager,1,1,1,1
